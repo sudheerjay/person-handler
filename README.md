@@ -30,7 +30,7 @@ creating image and running the docker container:
 
 once you are in personhandler directory please run the following
 
-"docker build -t personhandler" ->this will build the docker image from our app.jar
+"docker build -t personhandler ." ->this will build the docker image from our app.jar
 
 "docker image ls" -> to check if the image has been created.
 
