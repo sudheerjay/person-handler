@@ -29,4 +29,6 @@ once the app is up and running, you can verify it by access with localhost:8082/
 which should redirect you to H2 DB console use embl/ebi as username/password
 
 I'm attaching the API postman collections and working images here for your reference.
+https://github.com/sudheerjay/personhandler/blob/main/EBI-EndPoints.postman_collection.json 
+please export these to your postman app so these will start working immediately. 
 
