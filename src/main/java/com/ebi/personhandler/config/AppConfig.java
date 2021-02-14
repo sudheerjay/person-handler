@@ -1,6 +1,5 @@
 package com.ebi.personhandler.config;
 
-import org.h2.server.web.WebServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,11 +7,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-	@SuppressWarnings("rawtypes")
-	@Bean
-	public ServletRegistrationBean h2servletRegistration() {
-	    ServletRegistrationBean registration = new ServletRegistrationBean(new WebServlet());
-	    registration.addUrlMappings("/console/*");
-	    return registration;
-	}
+    @Bean
+    @SuppressWarnings("rawtypes")
+    ServletRegistrationBean h2servletRegistration(){
+		ServletRegistrationBean registration = new ServletRegistrationBean( new org.h2.server.web.WebServlet());
+        registration.addUrlMappings("/console/*");
+        registration.addInitParameter("webAllowOthers", "true");
+        registration.addInitParameter("webPort", "8080");
+
+        return registration;
+    }
 }
