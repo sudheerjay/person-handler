@@ -26,7 +26,11 @@ once you are in personhandler directory please run the following
 "docker run -p8082:8080 personhandler" -> this will create a container and runs the image on it. 
 
 once the app is up and running, you can verify it by access with localhost:8082/console. 
-which should redirect you to H2 DB console use embl/ebi as username/password
+
+which should redirect you to H2 DB console login page:
+JDBC URL: jdbc:h2:mem:ebidb
+userName: embl
+password: ebi
 
 I'm attaching the API postman collections and working images here for your reference.
 https://github.com/sudheerjay/personhandler/blob/main/EBI-EndPoints.postman_collection.json 
