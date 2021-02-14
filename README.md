@@ -1,7 +1,7 @@
 # person-handler
 This repository provides APIs to add, update, fetch and delete data related a specific person.
 
-This app run on port:8082
+This app runs on port:8082
 
 This app provides a service to maintain person records in in-memory H2 database.
 To login to H2 DB, you need to start the App and access "http://localhost:8082/console/"
@@ -30,11 +30,11 @@ creating image and running the docker container:
 
 once you are in personhandler directory please run the following
 
-"docker build -t personhandler ." ->this will build the docker image from our app.jar
+"docker build -t personhandler ." ->this will build the docker image from our personhandler-0.0.1-SNAPSHOT.jar
 
 "docker image ls" -> to check if the image has been created.
 
-"docker run -p8082:8080 personhandler" -> this will create a container and runs the image on it. 
+"docker run -p8082:8082 personhandler" -> this will create a container and runs the image on it. 
 
 once the app is up and running, you can verify it by access with localhost:8082/console. 
 
